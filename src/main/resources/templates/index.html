@@ -1,0 +1,119 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('Hello, Spring Boot!')">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="starter-template.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Yongin Secretary</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')">
+
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Yongin Secretary</h1>
+
+            <p>Yongin Secretary is a powerful secretary site, equipped with an AI chatting bot system <br>responsible for your planning, and also lets you know the current weather in each area</p>
+    </div>
+
+
+
+    <div class="b-example-divider"></div>
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Category</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">TODO</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                                <small>Earth</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                                <small>3d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">BOARD</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                                <small>Pakistan</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                                <small>4d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">WEATHER</h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                                <small>California</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                                <small>5d</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
