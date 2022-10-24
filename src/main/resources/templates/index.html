@@ -37,63 +37,48 @@
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" >
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">TODO</h2>
+                        <span style="font-weight:bold;">당신의 일정을 관리하세요</span>
                         <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                                <small>Earth</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                                <small>3d</small>
-                            </li>
+                            <form th:action="@{/todo}" method="GET" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <button type="submit" class="btn  bg-white  text-dark" style="margin-top:10px;">Start</button>
+                                </div>
+                            </form>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">BOARD</h2>
+                        <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">CHATBOT</h2>
+                        <span style="font-weight:bold;">챗봇과의 대화를 시작하세요</span>
                         <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                                <small>Pakistan</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                                <small>4d</small>
-                            </li>
+                            <form th:action="@{/chatbot}" method="GET" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <button type="submit" class="btn  bg-white  text-dark">Start</button>
+                                </div>
+                            </form>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+                <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
                     <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">WEATHER</h2>
+                        <span style="font-weight:bold;">내일의 날씨를 확인하세요</span>
                         <ul class="d-flex list-unstyled mt-auto">
-                            <li class="me-auto">
-                                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                            </li>
-                            <li class="d-flex align-items-center me-3">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                                <small>California</small>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                                <small>5d</small>
-                            </li>
+                            <form th:action="@{/locations}" method="GET" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <button type="submit" class="btn  bg-white  text-dark">Start</button>
+                                </div>
+                            </form>
                         </ul>
                     </div>
                 </div>

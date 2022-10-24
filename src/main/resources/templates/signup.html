@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Todo</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/signup.css}"/>
+    <script type="text/javascript" th:src="@{/js/signup.js}"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="starter-template.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')">
+</nav>
+<div class="login-page">
+    <div class="form">
+        <form class="register-form" name="loginForm" id="loginForm" method="post" action="/save">
+            <input type="text" name="userName" id="userName" placeholder="User Name"/>
+            <input type="password" name="password" value="" id="password" placeholder="password"/>
+            <input type="text" name="email" id="email" placeholder="Email Address"/>
+            <p class="errorEmailMessage"></p>
+            <button type="submit" class="btn bg-dark">Sign up</button>
+            <p class="message">이미 계정이 있으신가요?<a href="/login">Sign in</a></p>
+            <div th:if="${error != null and error}">
+                <p class="errorMessage"> Girdiğiniz bilgileri kontrol ediniz...</p>
+            </div>
+            <p class="errorMessage"></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

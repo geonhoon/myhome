@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head(title)">
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:fragment="menu(menu)">
-  <a class="navbar-brand" href="#">Yongin Secretary</a>
+  <a class="navbar-brand" th:href="@{/}">Yongin Secretary</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
           aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,17 +25,21 @@
       <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
         <a class="nav-link" href="#" th:href="@{/}">홈 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
       </li>
-      <li class="nav-item" th:classappend="${menu} == 'board'? 'active'">
-        <a class="nav-link" href="#" th:href="@{/board/list}">게시판 <span class="sr-only" th:if="${menu} == 'board'">(current)</span></a>
+      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
+        <a class="nav-link" href="#" th:href="@{/board/list}">게시판 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
       </li>
       <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
-        <a class="nav-link" href="#" th:href="@{/}">투두 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+        <a class="nav-link" href="#" th:href="@{/todo}">투두 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
       </li>
       <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
-        <a class="nav-link" href="#" th:href="@{/}">날씨 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+        <a class="nav-link" href="#" th:href="@{/weather}">날씨 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
       </li>
-      <a class="btn btn-secondary mr-2 my-2 my-sm-0" th:href="@{/templates/register}" sec:authorize="!isAuthenticated()">register</a>
-      <a class="btn btn-secondary my-2 my-sm-0" th:href="@{/templates/login}" sec:authorize="!isAuthenticated()">login</a> <!-- 로그인이 안된 경우  -->
+      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
+        <a class="nav-link" href="#" th:href="@{/login}">로그인 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      </li>
+      <li class="nav-item" th:classappend="${menu} == 'home'? 'active'">
+        <a class="nav-link" href="#" th:href="@{/signup}">회원가입 <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+      </li>
 
 
       <!-- <li class="nav-item">

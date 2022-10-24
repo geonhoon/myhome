@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Giriş yap</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/signup.css}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="starter-template.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')">
+</nav>
+<div class="login-page">
+    <div class="form">
+        <div th:if="${success != null and success}">
+            <p class="successMessage">Kaydınız başarıyla tamamlanmıştır. Giriş yapabilirsiniz.</p>
+        </div>
+
+        <form name="loginForm" method="post" action="/login">
+            <input type="text" placeholder="Email addres" name="email"/>
+            <input type="password" placeholder="password" name="password"/>
+            <button type="submit" class="btn bg-dark">Sign in</button>
+            <div th:if="${error != null and error}">
+                <p class="errorMessage">유효하지 않은 이메일입니다.</p>
+            </div>
+            <p class="message">계정이 없으신가요?<a href="/signup">Sign up</a></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
